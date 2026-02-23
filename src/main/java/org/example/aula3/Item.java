@@ -15,7 +15,7 @@ public class Item {
     public void usar(Heroi heroi) {
         if(tipo.equals("cura")) {
             heroi.usarPocao();
-            System.out.println(" 🧪" + nome + " fou usado!");
+            System.out.println(" 🧪" + nome + " foi usado!");
         }
     }
 

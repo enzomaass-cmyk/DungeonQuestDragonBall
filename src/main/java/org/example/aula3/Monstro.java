@@ -8,6 +8,15 @@ public class Monstro {
     private int defesa;
     private int xpRecompensa;
 
+    public Monstro(String nome, String emoji, int vida, int ataque, int defesa, int xpRecompensa) {
+        this.nome = nome;
+        this.emoji = emoji;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defesa = defesa;
+        this.xpRecompensa = xpRecompensa;
+    }
+
     public String getNome() { return emoji + " " + nome; }
     public int getVida() { return vida;}
     public int getXpRecompensa() {return  xpRecompensa; }
