@@ -14,6 +14,32 @@ public class Heroi {
 
     private ArrayList<Item> inventario = new ArrayList<>();
 
+    private int nivel = 1;
+
+    private void verificarNivel() {
+        int xpNecessario = nivel*100; //fórmula do XP necessário
+
+        if(xp>= xpNecessario) {
+            nivel++;
+            //aumentar atributos 
+            ataque +=10;
+            defesa +=5;
+            vidaMaxima += 20;
+            vidaAtual += 20; //cura parcial ao subir de nivel
+            if(vidaAtual > vidaMaxima) vidaAtual = vidaMaxima;
+            pocoes++; //ganha 1 poção ao subir de nível
+
+            //exibir mensagem de Level Up
+            System.out.println("\n🎉 LEVEL UP! 🎉");
+             System.out.println(" " + nome + " chegou ao Nivel " + nivel + "!");
+              System.out.println("⚔️ Ataque +10 | 🛡️ Defesa +5 | ❤️ Vida +20");
+        }
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
     public Heroi(String nome, int vida, int ataque, int defesa) {
         this.nome = nome;
         this.vidaMaxima = vida;
@@ -116,6 +142,7 @@ public void usarItem(int indice) {
     public void ganharXp(int quantidade) {
         xp += quantidade;
         System.out.println(" ⭐⬆️" + quantidade + " XP! [Total: " + xp + "]");
+        verificarNivel(); 
     }
 
     public boolean estaVivo() {
@@ -129,6 +156,7 @@ public void usarItem(int indice) {
         System.out.println(" 🛡️ Defesa: " + defesa);
         System.out.println(" 🧪 Poções: " + pocoes);
         System.out.println(" ⭐ XP: " + xp);
+        System.out.println("🏅 Nível: " + nivel);
 
     }
 }
