@@ -18,9 +18,11 @@ public class Main {
         heroi.exibirStatus();
 
         Monstro[] monstros = {
-                new Monstro("Goblin", "👿", 40,12,2,20),
-                new Monstro("Orc Guerreiro", "👺", 70,12,2,20),
-                new Monstro("Dragão Negro", "👽", 120,28,10,100)
+                
+                new Monstro("Capitão Ginyu", "👾", 50,14,3,30), // novo monstro Capitão Ginyu
+                new Monstro("Freeza de Namek", "👽", 90,22,7,65), // novo monstro Freeza de Namek
+                new Monstro("Cell Perfeito", "🪲", 140,30,12,100), // novo monstro Cell Perfeito
+                new Monstro("Kid Boo", "💥", 200,40,18,200) // novo monstro Kid Boo
         };
 
         int vitorias = 0;
