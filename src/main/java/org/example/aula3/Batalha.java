@@ -39,12 +39,15 @@ public class Batalha {
         return resolverFinal();
     }
 
+     
+
     //---------------- Metodos Privados ---------------------
 
     private void turnoHeroi() {
         System.out.println("\n O que " + heroi.getNome() + " faz?");
         System.out.println(" [1] Atacar");
         System.out.println(" [2] Usar Poção ( " +heroi.getPocoes() + " restantes)");
+        System.out.println(" [3] Usar Item do Inventário ");
         System.out.println(" Escolha: ");
 
         int escolha = lerEscolha();
@@ -58,6 +61,16 @@ public class Batalha {
             case 2:
                 heroi.usarPocao();
                 break;
+                case 3:
+                    heroi.listarInventario();
+                    System.out.println("Digite o número do item para usar (ou -1 para cancelar): ");
+                    int indice = lerEscolha();
+                    if (indice != -1) {
+                        heroi.usarItem(indice);
+                    } else {
+                        System.out.println(" Ação cancelada.");
+                    }
+                    break;
             default:
                 System.out.println(" ❓ Opção inválida - turno perdido!!");
         }

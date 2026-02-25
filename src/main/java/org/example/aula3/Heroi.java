@@ -89,8 +89,23 @@ public void usarItem(int indice) {
         }
 
         int cura = 30;
+
+        //ANTES de curar
+        System.out.println("Vida antes:"+ vidaAtual);
+
+        int vidaAntes = vidaAtual;
+
+        //cura
         vidaAtual += cura;
-        if ( vidaAtual > vidaMaxima) vidaAtual = vidaMaxima;
+        if ( vidaAtual > vidaMaxima) {
+             vidaAtual = vidaMaxima;
+    }
+
+    // quanto realmente curou
+    int curado = vidaAtual - vidaAntes;
+
+    //DEPOIS de curar
+        System.out.println("Vida depois:" + vidaAtual);
 
         pocoes--;
         System.out.println(" 🧪 " + nome + " usou poção! +30 💚 "

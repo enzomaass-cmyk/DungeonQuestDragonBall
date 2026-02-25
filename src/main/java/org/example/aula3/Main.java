@@ -12,8 +12,12 @@ public class Main {
         System.out.println("🦸🏽‍♂ Digite o nome do seu heroí: ️");
         String nomeHeroi = scanner.next();
 
-        Heroi heroi = new Heroi(nomeHeroi, 150,35,5);
+        Heroi heroi = new Heroi(nomeHeroi, 170,30,15);
 
+        //Dando itens iniciais ao herói
+        heroi.adicionarItem(new Item("Doação de ki", "cura",30));
+        heroi.adicionarItem(new Item("Água sagrada", "cura",80));
+        heroi.adicionarItem(new Item("Semente dos Deuses", "cura",150));
         System.out.println("\n✅ Herói criado com sucesso!");
         heroi.exibirStatus();
 

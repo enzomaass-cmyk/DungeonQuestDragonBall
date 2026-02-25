@@ -15,7 +15,7 @@ public class Item {
 
     //Aplica o efeito do item no herói, ex: se for aumento temporario no poder, aumenta a força do herói
     public void usar(Heroi heroi) {
-        if(tipo.equals("kaiohken")) {
+        if(tipo.equals("cura")) {
             heroi.usarPocao();
             System.out.println(" 🔥" + nome + " foi usado!");
         }
