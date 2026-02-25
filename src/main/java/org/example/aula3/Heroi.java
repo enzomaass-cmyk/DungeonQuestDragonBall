@@ -1,5 +1,7 @@
 package org.example.aula3;
 
+import java.util.ArrayList;
+
 public class Heroi {
 
     private String nome;
@@ -9,6 +11,8 @@ public class Heroi {
     private int defesa;
     private int pocoes;
     private int xp;
+
+    private ArrayList<Item> inventario = new ArrayList<>();
 
     public Heroi(String nome, int vida, int ataque, int defesa) {
         this.nome = nome;
@@ -43,6 +47,36 @@ public class Heroi {
         + "[❤️ " + vidaAtual + "/" + vidaMaxima + "]");
 
     }
+
+    public void adicionarItem(Item item) {
+    inventario.add(item);
+    System.out.println("📦 " + item.getNome() + " foi adicionado ao inventário!");
+     }
+
+     public void listarInventario() {
+    if (inventario.isEmpty()) {
+        System.out.println("📭 Inventário vazio!");
+        return;
+    }
+
+    System.out.println("🎒 Inventário:");
+    for (Item item : inventario) {
+        System.out.println("- " + item.getDescricao());
+    }
+ }
+
+public void usarItem(int indice) {
+    if (indice < 0 || indice >= inventario.size()) {
+        System.out.println("❌ Item inválido!");
+        return;
+    }
+
+    Item item = inventario.get(indice);
+    item.usar(this);
+    inventario.remove(indice);
+}
+
+
 
     public boolean usarPocao() {
         if (pocoes <= 0) {

@@ -68,10 +68,10 @@ public class Main {
     }
 
     private static void exibirTitulo() {
-        System.out.println("-------------------------------------------");
-        System.out.println("-         ⚔️ DUNGEON QUEST                -");
-        System.out.println("-  Programação Orientação a Objeto        -");
-        System.out.println("-------------------------------------------");
+        System.out.println("-----------------------------------------");
+        System.out.println("-       ⚔️ DUNGEON QUEST DRAGON BALL    -");
+        System.out.println("-  Programação Orientação a Objeto       -");
+        System.out.println("------------------------------------------");
         System.out.println();
     }
 
